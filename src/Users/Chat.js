@@ -109,7 +109,7 @@ renderDate = (date) => {
 
             return   <List.Item>
             <List.Content floated='right'>
-              <List.Header>${l[Object.keys(l)[0]].message}</List.Header>
+              <List.Header>{l[Object.keys(l)[0]].message}</List.Header>
               {this.renderDate(l[Object.keys(l)[0]].time)}
             </List.Content>
           </List.Item>

@@ -49,7 +49,7 @@ componentDidMount(){
                 
                 
                   
-                <Menu.Item position='right'>
+                {this.props.main.state.logged && <Menu.Item position='right'>
                 <Button as='a' primary onClick={() => {
                   console.log('Graphed')
                     this.props.main.setState({
@@ -97,6 +97,7 @@ componentDidMount(){
                     Sign Out
                   </Button>
                 </Menu.Item>
+                }
                 </Container>
               </Menu>
           
