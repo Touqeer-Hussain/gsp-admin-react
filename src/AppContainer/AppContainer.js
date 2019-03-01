@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import 'semantic-ui-css/semantic.min.css'
 import {
     Container,
     Image,
@@ -11,7 +12,7 @@ import {
   } from 'semantic-ui-react'
 import logo from './logo.png'
 import swal from 'sweetalert';
-import 'semantic-ui-css/semantic.min.css'
+
 import firebase from '../Config/firebase'
 
 

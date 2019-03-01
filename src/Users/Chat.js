@@ -21,7 +21,15 @@ class Chat extends Component{
     
   componentDidMount(){
       this.dataGet();
+       
   }
+
+  scrollToBottom = () => {
+    this.messagesEnd.scrollIntoView({ behavior: "smooth" });
+  }
+  
+  
+  
   async dataGet(){
       var c = await localStorage.getItem('chatTarget')
       console.log(c)
@@ -40,6 +48,8 @@ class Chat extends Component{
         
             this.setState({
                 temp: true
+            },() => {
+              this.scrollToBottom();
             })
             
             
@@ -110,7 +120,9 @@ renderDate = (date) => {
     })
 }
 
-
+<div style={{ float:"left", clear: "both" }}
+             ref={(el) => { this.messagesEnd = el; }}>
+        </div>
 </List>
   
             
